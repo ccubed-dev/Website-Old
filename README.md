@@ -1,4 +1,4 @@
-# CCubed Webnsite
+<h1 align="center">CCubed Website</h1>
 <p align="center">
   <img src="logo.png"/>
 </p>

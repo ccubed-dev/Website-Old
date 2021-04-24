@@ -6,7 +6,7 @@ module.exports = {
             '@images': path.resolve(__dirname, "src/assets/images/"),
             '@routes': path.resolve(__dirname, "src/routes/Router.jsx"),
             '@scenes': path.resolve(__dirname, "src/scenes/"),
-            '@styles': path.resolve(__dirname, "src/styles/App.css")
+            '@styles': path.resolve(__dirname, "src/styles/")
         }
     }
 }

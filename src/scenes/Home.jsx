@@ -1,13 +1,13 @@
 import React from 'react'
 import logo from '@images/logo.svg';
-import { Test } from '@atoms'
+import { AppContainer, AppHeader, AppLogo, Test } from '@atoms'
 import '../styles/App.css';
 
 function Home() {
     return (
-        <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
+        <AppContainer>
+            <AppHeader>
+                <AppLogo src={logo} />
                 <Test />
                 <a
                     className="App-link"
@@ -17,8 +17,8 @@ function Home() {
                 >
                     Learn React
                 </a>
-            </header>
-        </div>
+            </AppHeader>
+        </AppContainer>
     );
 }
 

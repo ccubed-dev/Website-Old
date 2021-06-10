@@ -5,11 +5,9 @@ import { Home } from '@scenes';
 const Router = () => {
     return (
         <>
-            <Route path="/"><Home /></Route>
-            {/* <Route path="/category"><Category /></Route>
-            <Route path="/products"><Products /></Route> */}
+            <Route exact path="/"><Home /></Route>
         </>
     )
 }
 
-export default Router
+export default Router;

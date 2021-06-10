@@ -3,12 +3,20 @@ import { ThemeProvider } from "styled-components";
 
 const theme = {
     colors: {
-        powderWhite: "#FFFDF9",
-        persianGreen: "#06B49A",
-        lightBlue: "#AFDBD2",
-        onyx: "#36313D"
+        black: "#000000",
+        white: "#FFFFFF",
+        orange: "#F7AB3B",
+        red: "#EA5133",
+        darkerBlue: "#1A384C",
+        darkBlue: "#1E8896",
+        blue: "#33BAC5",
+        lightBlue: "#C6E3D2",
     },
-    fonts: ["sans-serif", "Roboto"],
+
+    fonts: {
+        text: "Roboto",
+
+    },
     fontSizes: {
         small: "1em",
         medium: "2em",

@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const Test = () => {
     return (
         <p>
             Edit <code>src/App.js</code> and save to reload.
         </p>
-    )
-}
+    );
+};
 
-export default Test
+export default Test;

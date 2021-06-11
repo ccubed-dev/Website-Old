@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const Img = styled.img`
     height: 40vmin;
@@ -15,12 +16,11 @@ const Img = styled.img`
         }
     }
 
-`
+`;
 
-const AppLogo = ({ src }) => {
-    return (
-        <Img src={src}></Img>
-    )
-}
+// eslint-disable-next-line react/prop-types
+const AppLogo = ({ src }) => (
+    <Img src={src}></Img>
+);
 
-export default AppLogo
+export default AppLogo;

@@ -11,8 +11,8 @@ const theme = {
         darkBlue: "#1E8896",
         blue: "#33BAC5",
         lightBlue: "#C6E3D2",
+        shadow: "black",
     },
-
     fonts: {
         text: "Roboto",
 
@@ -21,9 +21,21 @@ const theme = {
         small: "1em",
         medium: "2em",
         large: "3em"
+    },
+    transitions: {
+        link: "0.25s",
+    },
+    shadows: {
+        blur: "20px",
+        elevations: {
+            low: "5px",
+            med: "10px",
+            high: "15px"
+        }
     }
 };
 
+// eslint-disable-next-line react/prop-types
 const Theme = ({ children }) => (
     <ThemeProvider theme={theme}>{children}</ThemeProvider>
 );

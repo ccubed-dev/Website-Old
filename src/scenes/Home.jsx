@@ -1,14 +1,10 @@
-import React from 'react'
-import logo from '@images/logo.svg';
-import { HeaderLink, AppContainer, AppHeader, AppLogo, Test } from '@atoms'
-import {Header} from '@organisms'
-import '../styles/App.css';
+import React from "react";
+import { AppContainer } from "@atoms";
+import {Header} from "@organisms";
 
 function Home() {
     return (
-        <AppContainer>
-            <Header></Header>
-        </AppContainer>
+        <Header></Header>
     );
 }
 

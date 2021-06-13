@@ -9,6 +9,11 @@ module.exports =
                             __dirname,
                             "src/components/atoms/"
                         ),
+                    "@molecules":
+                        path.resolve(
+                            __dirname,
+                            "src/components/molecules/"
+                        ),
                     "@organisms":
                         path.resolve(
                             __dirname,
@@ -33,6 +38,11 @@ module.exports =
                         path.resolve(
                             __dirname,
                             "src/styles/"
+                        ),
+                    "@constants":
+                        path.resolve(
+                            __dirname,
+                            "src/resources/constants/"
                         ),
                 },
             },

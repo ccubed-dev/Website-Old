@@ -8,10 +8,13 @@ const theme = {
         orange: "#F7AB3B",
         red: "#EA5133",
         darkerBlue: "#1A384C",
+        darkestBlue: "#132a3a",
         darkBlue: "#1E8896",
         blue: "#33BAC5",
+        hoverBlue: "#2eabb6",
+        clickBlue: "#26c1cf",
         lightBlue: "#C6E3D2",
-        shadow: "black",
+        shadow: "#1A384C",
     },
     fonts: {
         text: "Roboto",
@@ -19,17 +22,19 @@ const theme = {
     },
     fontSizes: {
         small: "1em",
-        medium: "2em",
-        large: "3em"
+        medium: "1.25em",
+        large: "3em",
+        socialMediaIcon: "1.7em"
     },
     transitions: {
         link: "0.25s",
+        button: "0.35s",
     },
     shadows: {
         blur: "20px",
         elevations: {
-            low: "5px",
-            med: "10px",
+            low: "2px",
+            med: "5px",
             high: "15px"
         }
     }

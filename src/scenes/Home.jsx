@@ -1,9 +1,15 @@
 import React from "react";
+import {PageContainer} from "@atoms";
 import {Header} from "@organisms";
+import {SocialMediaBar} from "@molecules";
 
 function Home() {
+    
     return (
-        <Header></Header>
+        <PageContainer>
+            <Header></Header>
+            <SocialMediaBar></SocialMediaBar>
+        </PageContainer>
     );
 }
 

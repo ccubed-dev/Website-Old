@@ -1,14 +1,23 @@
 {
     "compilerOptions": {
         "target": "esnext",
-        "baseUrl": "./src",
+        "baseUrl": ".",
         "jsx": "react",
         "paths": {
             "@atoms/*": [
-                "./components/atoms/"
+                "components/atoms/"
+            ],
+            "@molecules/*": [
+                "components/molecules/"
+            ],
+            "@organisms/*": [
+                "components/organisms/"
+            ],
+            "@constants/*": [
+                "resources/constants/"
             ],
             "@images/*": [
-                "./assets/images/"
+                "resources/images/"
             ]
         }
     },

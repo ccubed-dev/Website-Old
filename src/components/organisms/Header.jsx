@@ -1,29 +1,25 @@
 import React from "react";
 import styled from "styled-components";
 import {HeaderLink} from "@atoms";
+import {pages} from "@constants";
 
 const Container = styled.div`
-	background-color: ${props => props.theme.colors.darkerBlue};
-    align-content: left;
-    box-shadow: 
-        0px 
-        ${props => props.theme.shadows.elevations.low} 
-        ${props => props.theme.shadows.blur} 
-        ${props => props.theme.colors.shadow};
+    height: 3em;
+
+	background-color: ${props => props.theme.colors.darkestBlue};
+    box-shadow: 0px ${props => props.theme.shadows.elevations.med} ${props => props.theme.shadows.blur} ${props => props.theme.colors.shadow};
+
+    display: flex;
+    align-content: center;
+    justify-content: left;
 `;
 
-const pagesList = [
-    "Home",
-    "About",
-    "Contact",
-    "Meet the Team"
-];
 
 function Header() {
     return (
         <Container >
             {
-                pagesList.map((page) => (
+                pages.map((page) => (
                     <HeaderLink key={page} text={page} url={`/${page}`}/>
                 ))
             }

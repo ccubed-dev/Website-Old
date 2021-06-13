@@ -1,13 +1,15 @@
-import Test from "./Test";
 import AppContainer from "./AppContainer";
-import AppHeader from "./AppHeader";
 import AppLogo from "./AppLogo";
+import CircularButton from "./CircularButton";
 import HeaderLink from "./HeaderLink";
+import PageContainer from "./PageContainer";
+import SocialMediaIcon from "./SocialMediaIcon";
 
 export {
     AppContainer,
-    AppHeader,
     AppLogo,
+    CircularButton,
+    PageContainer,
     HeaderLink,
-    Test,
+    SocialMediaIcon,
 };

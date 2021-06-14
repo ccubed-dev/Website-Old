@@ -4,7 +4,6 @@ import {MetricsBar, SocialMediaBar} from "@molecules";
 import {Header} from "@organisms";
 
 function Home() {
-    
     return (
         <PageContainer>
             <Header></Header>

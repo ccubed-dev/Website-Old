@@ -1,11 +1,13 @@
 import styled from "styled-components";
+import {FlexColumn} from "@atoms";
 
-const PageContainer = styled.div`
-  display: flex;
-  flex-direction: column;
+const PageContainer = styled(FlexColumn)`
   height: 100%;
   width: 100%;
-  /* background-color: black; */
+  align-items: center;
+  align-content: center;
+
+  background-color: ${props => props.theme.colors.background};
 `;
 
 export default PageContainer;

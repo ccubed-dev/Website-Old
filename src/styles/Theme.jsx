@@ -15,6 +15,7 @@ const theme = {
         clickBlue: "#26c1cf",
         lightBlue: "#C6E3D2",
         shadow: "#1A384C",
+        background: "#fafafa",
     },
     fonts: {
         text: "Roboto",
@@ -32,7 +33,7 @@ const theme = {
         logo: "0.5s",
     },
     shadows: {
-        blur: "15px",
+        blur: "2px",
         elevations: {
             low: "1px",
             med: "5px",

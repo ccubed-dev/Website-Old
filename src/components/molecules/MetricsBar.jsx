@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import {MetricsCounter} from "@atoms";
+import {Card, MetricsCounter} from "@atoms";
 
-const Container = styled.div`
+const Container = styled(Card)`
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;

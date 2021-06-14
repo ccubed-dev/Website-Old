@@ -5,6 +5,8 @@ import {pages} from "@constants";
 
 const Container = styled.div`
     height: 3em;
+    width: 100%;
+    border-radius: 1px;
 
 	background-color: ${props => props.theme.colors.darkestBlue};
     box-shadow: 0px ${props => props.theme.shadows.elevations.low} ${props => props.theme.shadows.blur} ${props => props.theme.colors.shadow};

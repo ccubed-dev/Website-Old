@@ -25,7 +25,7 @@ const ButtonCircle = styled.div`
     &:hover {
 		border-radius: 1.25em;
         background-color: ${props => props.theme.colors.orange};
-		box-shadow: 2px ${props => props.theme.shadows.elevations.low} ${props => props.theme.shadows.blur} ${props => props.theme.colors.shadow};
+		box-shadow: 0px ${props => props.theme.shadows.elevations.low} ${props => props.theme.shadows.blur} ${props => props.theme.colors.shadow};
 		transition-timing-function: ease;
 		cursor: pointer;
 		height: 3.2em;

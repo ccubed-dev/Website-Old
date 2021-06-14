@@ -13,6 +13,9 @@
             "@organisms/*": [
                 "components/organisms/"
             ],
+            "@resources/*": [
+                "resources"
+            ],
             "@constants/*": [
                 "resources/constants/"
             ],

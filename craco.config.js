@@ -44,6 +44,11 @@ module.exports =
                             __dirname,
                             "src/resources/constants/"
                         ),
+                    "@resources":
+                        path.resolve(
+                            __dirname,
+                            "src/resources/"
+                        ),
                 },
             },
     };

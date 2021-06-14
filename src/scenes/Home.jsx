@@ -1,7 +1,7 @@
 import React from "react";
 import {PageContainer} from "@atoms";
+import {MetricsBar, SocialMediaBar} from "@molecules";
 import {Header} from "@organisms";
-import {SocialMediaBar} from "@molecules";
 
 function Home() {
     
@@ -9,6 +9,7 @@ function Home() {
         <PageContainer>
             <Header></Header>
             <SocialMediaBar></SocialMediaBar>
+            <MetricsBar></MetricsBar>
         </PageContainer>
     );
 }

@@ -6,6 +6,7 @@ import {socialMedias} from "@constants";
 const Container = styled.div`
 	display: flex;
 	flex-direction: row;
+    margin: 1em;
 `;
 
 // eslint-disable-next-line react/prop-types

@@ -6,6 +6,7 @@ import styled from "styled-components";
 const Icon = styled.i`
     color: white;
     font-size: ${props => props.theme.fontSizes.socialMediaIcon};
+    position: relative;
 `;
 
 const Link = styled.a`

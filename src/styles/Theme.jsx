@@ -29,11 +29,12 @@ const theme = {
     transitions: {
         link: "0.25s",
         button: "0.35s",
+        logo: "0.5s",
     },
     shadows: {
-        blur: "20px",
+        blur: "15px",
         elevations: {
-            low: "2px",
+            low: "1px",
             med: "5px",
             high: "15px"
         }

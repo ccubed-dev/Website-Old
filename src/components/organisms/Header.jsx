@@ -7,7 +7,7 @@ const Container = styled.div`
     height: 3em;
 
 	background-color: ${props => props.theme.colors.darkestBlue};
-    box-shadow: 0px ${props => props.theme.shadows.elevations.med} ${props => props.theme.shadows.blur} ${props => props.theme.colors.shadow};
+    box-shadow: 0px ${props => props.theme.shadows.elevations.low} ${props => props.theme.shadows.blur} ${props => props.theme.colors.shadow};
 
     display: flex;
     align-content: center;

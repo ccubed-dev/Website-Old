@@ -15,9 +15,8 @@ const ButtonCircle = styled.div`
     align-items: center;
     justify-content: center;
 	
-	color: ${props => props.theme.colors.blue};
 	background-color: ${props => props.theme.colors.darkBlue};
-	opacity: 0.7;
+	opacity: 0.9;
     
 	transition-property: border-radius, background-color, box-shadow, height, width;
 	transition-duration: ${props => props.theme.transitions.link};
@@ -26,16 +25,17 @@ const ButtonCircle = styled.div`
     &:hover {
 		border-radius: 1.25em;
         background-color: ${props => props.theme.colors.orange};
-		box-shadow: 0px ${props => props.theme.shadows.elevations.low} ${props => props.theme.shadows.blur} ${props => props.theme.colors.shadow};
+		box-shadow: 2px ${props => props.theme.shadows.elevations.low} ${props => props.theme.shadows.blur} ${props => props.theme.colors.shadow};
 		transition-timing-function: ease;
 		cursor: pointer;
+		height: 3.2em;
+		width: 3.2em;
+		/* margin: 0.3em; */
     }
 
 	&:active {
         background-color: ${props => props.theme.colors.blue};
 		box-shadow: 0px ${props => props.theme.shadows.elevations.med} ${props => props.theme.shadows.blur} ${props => props.theme.colors.shadow};
-		height: 3.1em;
-		width: 3.1em;
 		transition-timing-function: ease;
 	}
 `;

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Logo from "@resources/images/ccubed_logo.svg";
 
 const Img = styled.img`
     height: 28vmin;
@@ -16,8 +17,8 @@ const Img = styled.img`
 `;
 
 // eslint-disable-next-line react/prop-types
-const AppLogo = ({ src }) => (
-    <Img src={src}></Img>
+const AppLogo = () => (
+    <Img src={Logo}></Img>
 );
 
 export default AppLogo;

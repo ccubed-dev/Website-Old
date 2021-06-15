@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import {Card, MetricsCounter} from "@atoms";
+import {metrics} from "@constants";
 
 const Container = styled(Card)`
 	display: flex;
@@ -13,9 +14,11 @@ const Container = styled(Card)`
 export default function MetricsBar() {
     return (
         <Container>
-            <MetricsCounter></MetricsCounter>
-            <MetricsCounter></MetricsCounter>
-            <MetricsCounter></MetricsCounter>
+            {
+                metrics.map((metric) => (
+                    <MetricsCounter amount={metric.amount} name={metric.name} key={metric.name}></MetricsCounter>
+                ))
+            }
         </Container>
     );
 }

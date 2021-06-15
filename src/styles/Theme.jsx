@@ -25,6 +25,8 @@ const theme = {
         small: "1em",
         medium: "1.25em",
         large: "3em",
+        header: "4em",
+        subHeader: "2em",
         socialMediaIcon: "1.7em"
     },
     transitions: {

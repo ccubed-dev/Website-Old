@@ -5,6 +5,21 @@ export const pages = [
     "Meet the Team"
 ];
 
+export const metrics = [
+    {
+        name: "Students Reached",
+        amount: "7.5k"
+    },
+    {
+        name: "Team Members",
+        amount: "39"
+    },
+    {
+        name: "Student Societies",
+        amount: "15"
+    },
+];
+
 export const socialMedias = [
     {
         name: "discord",

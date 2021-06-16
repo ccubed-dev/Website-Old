@@ -11,7 +11,7 @@ const ButtonCircle = styled.div`
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
 	

@@ -4,6 +4,11 @@ module.exports =
         webpack:
             {
                 alias: {
+                    "@animations":
+                        path.resolve(
+                            __dirname,
+                            "src/components/animations/"
+                        ),
                     "@atoms":
                         path.resolve(
                             __dirname,

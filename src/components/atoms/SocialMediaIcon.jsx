@@ -16,11 +16,11 @@ const Link = styled.a`
 // eslint-disable-next-line react/prop-types
 const SocialMediaIcon = ({href, icon}) => {
     return (
-        <Link href={href} target="_blank" rel="noreferrer">
-            <CircularButton>
+        <CircularButton>
+            <Link href={href} target="_blank" rel="noreferrer">
                 <Icon className={`fab ${icon}`}></Icon>
-            </CircularButton>
-        </Link>
+            </Link>
+        </CircularButton>
     );
 };
 

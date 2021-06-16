@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Logo from "@resources/images/ccubed_logo.svg";
 
 const Img = styled.img`
+    display: inline-block;
     height: 28vmin;
 
     transition-property: height;

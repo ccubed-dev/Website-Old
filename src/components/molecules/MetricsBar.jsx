@@ -9,6 +9,10 @@ const Container = styled(Card)`
 	justify-content: space-between;
 	padding: 2em;
 	width: 60%;
+
+    //centers
+    margin-left: auto;
+    margin-right: auto;
 `;
 
 export default function MetricsBar() {

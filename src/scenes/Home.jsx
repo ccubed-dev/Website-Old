@@ -1,14 +1,14 @@
 import React from "react";
-import {AppLogo, PageContainer} from "@atoms";
-import {MetricsBar, SocialMediaBar} from "@molecules";
+import {PageContainer} from "@atoms";
+import {Greeter} from "@molecules";
 import {Header} from "@organisms";
+import MetricsBar from "src/components/molecules/MetricsBar";
 
 function Home() {
     return (
         <PageContainer>
             <Header></Header>
-            <AppLogo></AppLogo>
-            <SocialMediaBar></SocialMediaBar>
+            <Greeter></Greeter>
             <MetricsBar></MetricsBar>
         </PageContainer>
     );

@@ -4,8 +4,7 @@ import styled from "styled-components";
 import {socialMedias} from "@constants";
 
 const Container = styled.div`
-	display: flex;
-	flex-direction: row;
+	display: inline-block;
     margin: 1em;
 `;
 

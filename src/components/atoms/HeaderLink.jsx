@@ -5,12 +5,11 @@ const Link = styled.a`
 	color: ${props => props.theme.colors.white};
     font-family: ${props => props.theme.fonts.text};
     font-size: ${props => props.theme.fontSizes.medium};
-    /* border-radius: 0.5em; */
     
     text-decoration: none;
    
     padding: 0.5em;
-    padding-top: 0.8em;
+    padding-top: 1.3em;
     padding-right: 1em;
     padding-left: 1em;
 
@@ -20,7 +19,7 @@ const Link = styled.a`
 
     &:hover {
         color: ${props => props.theme.colors.orange};
-        background-color: ${props => props.theme.colors.darkerBlue};
+        background-color: ${props => props.theme.colors.shadow};
         
         border-bottom: 2px solid ${props => props.theme.colors.orange};
     }

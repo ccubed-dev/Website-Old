@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import {AppLogo, FlexRow} from "@atoms";
-import {SocialMediaBar} from "@molecules";
 import {FadeIn, SlideLeft} from "@animations";
 
 const Container = styled.div`
@@ -28,8 +27,6 @@ const Greeter = () => {
                 <SlideLeft delay="0.5s">
                     <Centerer>
                         <AppLogo></AppLogo>
-                        <br></br>
-                        <SocialMediaBar></SocialMediaBar>
                     </Centerer>
                 </SlideLeft>
                 <TextContainer>

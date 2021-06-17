@@ -9,12 +9,12 @@ const theme = {
         red: "#EA5133",
         darkerBlue: "#1A384C",
         darkestBlue: "#132a3a",
-        darkBlue: "#1E8896",
+        darkBlue: "#1E889630",
         blue: "#33BAC5",
         hoverBlue: "#2eabb6",
         clickBlue: "#26c1cf",
         lightBlue: "#C6E3D2",
-        shadow: "#1A384C",
+        shadow: "#1A384C40",
         background: "#fafafa",
     },
     fonts: {
@@ -27,7 +27,7 @@ const theme = {
         large: "3em",
         header: "4em",
         subHeader: "2em",
-        socialMediaIcon: "1.7em"
+        socialMediaIcon: "2em"
     },
     transitions: {
         link: "0.25s",

@@ -10,6 +10,7 @@ const theme = {
         darkerBlue: "#1A384C",
         darkestBlue: "#132a3a",
         darkBlue: "#1E889630",
+        primaryButton: "#1A384C90",
         blue: "#33BAC5",
         hoverBlue: "#2eabb6",
         clickBlue: "#26c1cf",

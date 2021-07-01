@@ -1,5 +1,6 @@
 import AppContainer from "./AppContainer";
 import AppLogo from "./AppLogo";
+import Button from "./Button";
 import Card from "./Card";
 import CircularButton from "./CircularButton";
 import FlexColumn from "./FlexColumn";
@@ -12,6 +13,7 @@ import SocialMediaIcon from "./SocialMediaIcon";
 export {
     AppContainer,
     AppLogo,
+    Button,
     Card,
     CircularButton,
     MetricsCounter,

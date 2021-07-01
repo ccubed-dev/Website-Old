@@ -17,8 +17,8 @@ const TextContainer = styled.div`
 
 const Header = styled.h1`
     font-size: 100%;
-    /* height: 100%; */
     width: 100%;
+    text-shadow: 2px 2px 5px black;
 `;
 
 const SubHeader = styled.h2`
@@ -38,7 +38,7 @@ const Greeter = () => {
             </Centerer>
             <TextContainer>
                 <Header>
-                            Hi! Were CCubed
+                            Computing Councils of Canada
                 </Header>
                 <SubHeader>
                             Connect Inspire Support

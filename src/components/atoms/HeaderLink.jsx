@@ -19,8 +19,6 @@ const Link = styled.a`
 
     &:hover {
         color: ${props => props.theme.colors.orange};
-        background-color: ${props => props.theme.colors.shadow};
-        
         border-bottom: 2px solid ${props => props.theme.colors.orange};
     }
 `;

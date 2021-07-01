@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import {AppLogo, FlexRow} from "@atoms";
-import {FadeIn, SlideLeft} from "@animations";
+import {SlideLeft} from "@animations";
 
 const Container = styled.div`
     display: block;
 	width:100%;
+    height: 100%;
 `;
 
 const Centerer = styled.div`
@@ -14,32 +15,46 @@ const Centerer = styled.div`
 `;
 
 const TextContainer = styled.div`
-    /* position: relative; */
     width: 40%;
-    text-align: center;
+    justify-content: center;
+    color: white;
+    font-size: 3.5em;
+    margin: 2vw;    
+`;
+
+const Header = styled.h1`
+    font-size: 100%;
+    /* height: 100%; */
+    width: 100%;
+`;
+
+const SubHeader = styled.h2`
+    font-size: 50%;
+`;
+
+const Test = styled(FlexRow)`
+    align-content: center;
     justify-content: center;
 `;
 
 const Greeter = () => {
     return (
         <Container>
-            <FlexRow>
+            <Test>
                 <SlideLeft delay="0.5s">
                     <Centerer>
                         <AppLogo></AppLogo>
                     </Centerer>
                 </SlideLeft>
                 <TextContainer>
-                    <FadeIn delay="2.5s" duration="1s">
-                        <h1>
+                    <Header>
                             Hi! Were CCubed
-                        </h1>
-                        <p>
+                    </Header>
+                    <SubHeader>
                             Connect Inspire Support
-                        </p>
-                    </FadeIn>
+                    </SubHeader>
                 </TextContainer>
-            </FlexRow>
+            </Test>
         </Container>
     );
 };

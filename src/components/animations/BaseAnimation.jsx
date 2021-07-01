@@ -19,7 +19,7 @@ BaseAnimation.defaultProps = {
     direction: "normal",
     fillMode: "both",
     playState: "running",
-    display: "block",
+    display: "inline",
     width: "fit-content"
 }; 
 export default BaseAnimation;

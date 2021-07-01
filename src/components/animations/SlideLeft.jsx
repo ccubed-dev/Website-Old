@@ -4,10 +4,10 @@ import BaseAnimation from "./BaseAnimation";
 const SlideLeftAnimation = keyframes`    
   from {
     margin-left: 40% ;
-    margin-right: 0%;
+    /* margin-right: 0%; */
   }
   to {
-    margin-left: 20%;
+    margin-left: 15%;
   }
   /* 0% { margin-left: auto; margin-right: auto; }
   100% { margin-left: 0px; } */

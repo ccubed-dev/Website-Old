@@ -19,7 +19,9 @@ const theme = {
         background: "#fafafa",
     },
     fonts: {
+        title: "PT Sans",
         text: "Roboto",
+
 
     },
     fontSizes: {

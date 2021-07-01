@@ -11,22 +11,22 @@ const HomeContainer = styled(PageContainer)`
     background-size: cover;
 `;
 
-const BottomRightDiv = styled.div`
+const SocialMediaIconsDiv = styled.div`
     position: absolute;
-     bottom:0;
-     right:0;
+    bottom: 0;
+    right: 0;
 `;
 
 
 function Home() {
     return (
         <HomeContainer>
-            <Header></Header>
-            <Greeter></Greeter>
-            <MetricsBar></MetricsBar>
-            <BottomRightDiv>
+            <Header />
+            <Greeter />
+            {/* <MetricsBar></MetricsBar> */}
+            <SocialMediaIconsDiv>
                 <SocialMediaBar></SocialMediaBar>
-            </BottomRightDiv>
+            </SocialMediaIconsDiv>
         </HomeContainer>
     );
 }

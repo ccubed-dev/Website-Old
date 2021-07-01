@@ -2,7 +2,8 @@ export const pages = [
     "Home",
     "About",
     "Contact",
-    "Meet the Team"
+    "Meet the Team",
+    "CubedCon"
 ];
 
 export const metrics = [

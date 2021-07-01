@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
+
 const ButtonCircle = styled.div`
 	border-radius: 3em;
 	height: 3.5em;
@@ -24,12 +25,11 @@ const ButtonCircle = styled.div`
     &:hover {
 		border-radius: 1.4em;
         background-color: ${props => props.theme.colors.orange};
+        opacity: 75%;
 		box-shadow: 0px ${props => props.theme.shadows.elevations.low} ${props => props.theme.shadows.blur} ${props => props.theme.colors.shadow};
 		transition-timing-function: ease;
 		cursor: pointer;
-		height: 3.6em;
-		width: 3.6em;
-		/* margin: 0.3em; */
+
     }
 
 	&:active {

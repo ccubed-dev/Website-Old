@@ -1,13 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import {AppLogo, FlexRow} from "@atoms";
-import {SlideLeft} from "@animations";
-
-const Container = styled.div`
-    display: block;
-	width:100%;
-    height: 100%;
-`;
 
 const Centerer = styled.div`
     width: fit-content;
@@ -39,23 +32,19 @@ const Test = styled(FlexRow)`
 
 const Greeter = () => {
     return (
-        <Container>
-            <Test>
-                <SlideLeft delay="0.5s">
-                    <Centerer>
-                        <AppLogo></AppLogo>
-                    </Centerer>
-                </SlideLeft>
-                <TextContainer>
-                    <Header>
+        <Test>
+            <Centerer>
+                <AppLogo></AppLogo>
+            </Centerer>
+            <TextContainer>
+                <Header>
                             Hi! Were CCubed
-                    </Header>
-                    <SubHeader>
+                </Header>
+                <SubHeader>
                             Connect Inspire Support
-                    </SubHeader>
-                </TextContainer>
-            </Test>
-        </Container>
+                </SubHeader>
+            </TextContainer>
+        </Test>
     );
 };
 

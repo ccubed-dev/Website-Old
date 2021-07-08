@@ -1,16 +1,22 @@
 import React from "react";
 import styled from "styled-components";
 import {AppLogo, FlexRow} from "@atoms";
+import { useMediaPredicate } from "react-media-hook";
+
 
 const GreeterContainer = styled(FlexRow)`
     align-content: center;
     justify-content: center;
-
 `;
 
 const AppLogoContainer = styled.div`
     width: 20%;
     text-align: center; 
+
+    @media screen and (max-width: 1000px) {
+        width: 100%;
+        text-align: center; 
+    }
 `;
 
 const TextContainer = styled.div`
@@ -20,6 +26,11 @@ const TextContainer = styled.div`
 
     justify-content: center;
     color: white;
+    
+    @media screen and (max-width: 1000px) {
+        width: 100%;
+        text-align: center; 
+    }
 `;
 
 const Header = styled.h1`
@@ -40,6 +51,8 @@ const SubHeader = styled.h2`
 `;
 
 const Greeter = () => {
+    const isMobile = useMediaPredicate("(max-width: 1000px)");
+
     return (
         <GreeterContainer>
             <AppLogoContainer>
@@ -47,7 +60,7 @@ const Greeter = () => {
             </AppLogoContainer>
             <TextContainer>
                 <Header>
-                    {"Computing Councils of Canada"}
+                    {isMobile ? "CCubed" : "Computing Councils of Canada"}
                 </Header>
                 <SubHeader>
                     {"Connect Inspire Support"}

@@ -10,7 +10,6 @@ const Container = styled(FlexRow)`
 
     align-content: center;
     justify-content: flex-end;
-
 `;
 
 

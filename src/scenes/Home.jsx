@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import {PageContainer} from "@atoms";
-import {Greeter, MetricsBar, SocialMediaBar} from "@molecules";
+import {Greeter, CountDownBar, SocialMediaBar} from "@molecules";
 import {Header} from "@organisms";
 import Wallpaper from "@resources/images/CCubedWallpaper.jpg";
 

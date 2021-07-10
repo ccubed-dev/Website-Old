@@ -3,8 +3,8 @@
   <img src="logo.png"/>
 </p>
 
-[![ESLint](https://github.com/ccubed-dev/Website/actions/workflows/eslint.yml/badge.svg)](https://github.com/SherRao/MuSpace/actions/workflows/eslint.yml)
-[![Node.js](https://github.com/ccubed-dev/Website/actions/workflows/node.js.yml/badge.svg)](https://github.com/SherRao/MuSpace/actions/workflows/node.js.yml)
+[![ESLint](https://github.com/ccubed-dev/Website/actions/workflows/eslint.yml/badge.svg)](https://github.com/ccubed-dev/Website/actions/workflows/eslint.yml)
+[![Node.js](https://github.com/ccubed-dev/Website/actions/workflows/node.js.yml/badge.svg)](https://github.com/ccubed-dev/Website/actions/workflows/node.js.yml)
 
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/SherRao/MuSpace/blob/main/LICENSE)
 [![GitHub contributors](https://img.shields.io/github/contributors/ccubed-dev/Website.svg?style=flat)](https://github.com/SherRao/MuSpace/graphs/contributors)

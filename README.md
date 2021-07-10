@@ -7,8 +7,8 @@
 [![Node.js](https://github.com/ccubed-dev/Website/actions/workflows/node.js.yml/badge.svg)](https://github.com/ccubed-dev/Website/actions/workflows/node.js.yml)
 
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/SherRao/MuSpace/blob/main/LICENSE)
-[![GitHub contributors](https://img.shields.io/github/contributors/ccubed-dev/Website.svg?style=flat)](https://github.com/SherRao/MuSpace/graphs/contributors)
-[![GitHub last commit](https://img.shields.io/github/last-commit/ccubed-dev/Website.svg?style=flat)](https://github.com/SherRao/MuSpace/commits/main)
+[![GitHub contributors](https://img.shields.io/github/contributors/ccubed-dev/Website.svg?style=flat)](https://github.com/ccubed-dev/Website/graphs/contributors)
+[![GitHub last commit](https://img.shields.io/github/last-commit/ccubed-dev/Website.svg?style=flat)](https://github.com/ccubed-dev/Website/commits/main)
 
 <p align="center">Welcome to the home for the codebase of the official CCubed website!</p>
 <p align="center">The fully functioning website can be found <a href="https://ccubed.dev" target="_blank">here</a>!</p>
@@ -29,4 +29,3 @@
 
 -   [Nathan Laundry](https://github.com/NLaundry)
 -   [Nausher Rao](https://github.com/SherRao)
--   [Ben Pearo](https://github.com/BenPearo)

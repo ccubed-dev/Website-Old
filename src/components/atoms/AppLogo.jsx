@@ -4,24 +4,23 @@ import Logo from "@resources/images/ccubed_logo.svg";
 
 const Img = styled.img`
     display: inline-block;
-    height: 100%;
-    width: 100%;
+    /* height: 90%; */
+    width: 90%;
 
-    transition-property: height;
+    transition-property: width;
     transition-duration: ${props => props.theme.transitions.logo};
+    transition-timing-function: ease;
 
-    &:hover {
-		/* border-radius: 1.25em; */
-		transition-timing-function: ease;
-		height: 21em;
-    }
+    /* &:hover {
+      width: 100%;
+    } */
 
     @media screen and (max-width: 1000px) {
-        height: 16em;
+        width: 50%;
 
-        &:hover {
-          height: 18em;
-        }
+      /* &:hover {
+        width: 60%;
+      } */
     }
 `;
 

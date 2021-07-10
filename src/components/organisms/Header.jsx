@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import {FlexRow, HeaderLink} from "@atoms";
 import {pages} from "@constants";
+import { slide as Menu } from "react-burger-menu";
+import { useMediaPredicate } from "react-media-hook";
 
 const Container = styled(FlexRow)`
     height: 5em;
@@ -14,14 +16,30 @@ const Container = styled(FlexRow)`
 
 
 function Header() {
+    const isMobile = useMediaPredicate("(max-width: 1000px)");
     return (
-        <Container >
+        <>
             {
-                pages.map((page) => (
-                    <HeaderLink key={page} text={page} url={`/${page}`}/>
-                ))
+                isMobile ?
+                    <Menu width={"40%"}>
+                        {
+                            pages.map((page) => (
+                                <a key={page} className="menu-item" text={page} href={`/${page}`}>{page}</a>
+                            ))
+
+                        }
+                    </Menu>
+                    :
+                    <Container >
+                        {
+                            pages.map((page) => (
+                                <HeaderLink key={page} text={page} url={`/${page}`}/>
+                            ))
+
+                        }
+                    </Container>
             }
-        </Container>
+        </>
     );
 
 }

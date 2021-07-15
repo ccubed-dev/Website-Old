@@ -23,7 +23,7 @@ function Home() {
         <HomeContainer>
             <Header />
             <Greeter />
-            {/* <MetricsBar></MetricsBar> */}
+            <CountDownBar/>
             <SocialMediaIconsDiv>
                 <SocialMediaBar></SocialMediaBar>
             </SocialMediaIconsDiv>

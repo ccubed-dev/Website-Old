@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-// import {FlexColumn} from "@atoms";
 
 const FlexColumn = styled.div`
 	display: flex;

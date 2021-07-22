@@ -15,7 +15,6 @@ const Link = styled.a`
 
 	transition-duration: ${props => props.theme.transitions.link};
 	transition-timing-function: ease;
-    
 
     &:hover {
         color: ${props => props.theme.colors.orange};

@@ -1,9 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import {FlexRow, HeaderLink} from "@atoms";
-import {pages} from "@constants";
-import { slide as Menu } from "react-burger-menu";
 import { useMediaPredicate } from "react-media-hook";
+
+import { HeaderLink } from "@atoms";
+import { FlexRow } from "@atoms/layout";
+
+import { pages } from "@constants";
+import { slide as Menu } from "react-burger-menu";
 
 const Container = styled(FlexRow)`
     height: 5em;
@@ -13,7 +16,6 @@ const Container = styled(FlexRow)`
     align-content: center;
     justify-content: flex-end;
 `;
-
 
 function Header() {
     const isMobile = useMediaPredicate("(max-width: 1000px)");
@@ -41,7 +43,6 @@ function Header() {
             }
         </>
     );
-
 }
 
 export default Header;

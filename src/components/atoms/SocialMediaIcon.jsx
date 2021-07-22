@@ -1,16 +1,17 @@
 import React from "react";
-import {CircularButton} from "@atoms";
+import { CircularButton } from "@atoms/buttons";
 import styled from "styled-components";
 
-//circular button that contains an image
 const Icon = styled.i`
     color: white;
     font-size: ${props => props.theme.fontSizes.socialMediaIcon};
     position: relative;
+
 `;
 
 const Link = styled.a`
     text-decoration: none;
+
 `;
 
 // eslint-disable-next-line react/prop-types

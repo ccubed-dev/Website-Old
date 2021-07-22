@@ -24,6 +24,9 @@
             ],
             "@images/*": [
                 "resources/images/"
+            ],
+            "@pages/*": [
+                "pages"
             ]
         }
     },

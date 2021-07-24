@@ -1,19 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-const Background = styled.div`
-	height: 3.0em;
+const ButtonCircle = styled.div`
+	border-radius: 3em;
+	height: 3.5em;
 	width: 3.5em;
 	margin: 0.5em;
-
-	border-radius: 0.5em;
-	padding-left: 1.5em;
-	padding-right: 1.5em;
-	padding-top: 0em;
-
-	font-size: 1.1em;
-	font-weight: bold;
-	color: white;
 
     display: -webkit-box;
     display: -moz-box;
@@ -23,17 +15,20 @@ const Background = styled.div`
     align-items: center;
     justify-content: center;
 	
-	background-color: ${props => props.theme.colors.primaryButton};
+	background-color: ${props => props.theme.colors.darkBlue};
     
 	transition-property: border-radius, background-color, box-shadow, height, width;
 	transition-duration: ${props => props.theme.transitions.link};
 	transition-timing-function: ease;
 
     &:hover {
+		border-radius: 1.4em;
         background-color: ${props => props.theme.colors.orange};
+        opacity: 75%;
 		box-shadow: 0px ${props => props.theme.shadows.elevations.low} ${props => props.theme.shadows.blur} ${props => props.theme.colors.shadow};
 		transition-timing-function: ease;
 		cursor: pointer;
+
     }
 
 	&:active {
@@ -44,10 +39,12 @@ const Background = styled.div`
 `;
 
 // eslint-disable-next-line react/prop-types
-export default function Button({children, onClick}) {
+function CircularButton({children, onClick}) {
     return (
-        <Background onClick={onClick}>
+        <ButtonCircle onClick={onClick}>
             {children}
-        </Background>
+        </ButtonCircle>
     );
 }
+
+export default CircularButton;

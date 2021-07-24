@@ -3,7 +3,7 @@ export const pages = [
     "About",
     "Contact",
     "Meet the Team",
-    "CubedCon"
+    // "CubedCon"
 ];
 
 export const metrics = [

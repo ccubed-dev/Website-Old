@@ -1,6 +1,9 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import {Button, Card, FlexRow, FlexColumn} from "@atoms";
+
+import { Card } from "@atoms";
+import { Button } from "@atoms/buttons";
+import { FlexRow, FlexColumn } from "@atoms/layout";
 
 const Container = styled(Card)`
 	display: flex;
@@ -12,10 +15,10 @@ const Container = styled(Card)`
         width:80%;
     }
 
-    //centers
     margin-left: auto;
     margin-right: auto;
 
+    /* background: rgba(0,0,0,0.5); */
 `;
 
 const CountDownContainer = styled(FlexRow)`
@@ -33,11 +36,15 @@ const NumberContainer = styled(FlexColumn)`
 const Header = styled.h1`
     font-size: 4em;
     color: white;
+
+    cursor: default;
 `;
 
 const SubHeader = styled.h1`
     font-size: 1.5em;
     color: white;
+
+    cursor: default;
 `;
 
 const ButtonContainer = styled(FlexRow)`

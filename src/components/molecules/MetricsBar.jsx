@@ -1,21 +1,21 @@
 import React from "react";
 import styled from "styled-components";
-import {Card, MetricsCounter} from "@atoms";
-import {metrics} from "@constants";
 
-const Container = styled(Card)`
+import { MetricsCounter } from "@atoms";
+import { metrics } from "@constants";
+
+const Container = styled.div`
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	padding: 2em;
 	width: 60%;
 
-    //centers
     margin-left: auto;
     margin-right: auto;
 `;
 
-export default function MetricsBar() {
+function MetricsBar() {
     return (
         <Container>
             {
@@ -26,3 +26,5 @@ export default function MetricsBar() {
         </Container>
     );
 }
+
+export default MetricsBar;

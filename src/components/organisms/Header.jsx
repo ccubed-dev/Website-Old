@@ -63,7 +63,7 @@ var styles = {
 };
 
 function Header() {
-    const isMobile = useMediaPredicate("(max-width: 1000px)");
+    const isMobile = useMediaPredicate("(max-width: 1180px)");
     return (
         <>
             {

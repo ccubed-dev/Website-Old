@@ -18,7 +18,7 @@ const Img = styled.img`
         cursor: pointer;
     }
 
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 1180px) {
         width: 50%;
 
     }

@@ -14,7 +14,7 @@ const AppLogoContainer = styled.div`
     width: 20%;
     text-align: center; 
 
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 1180px) {
         width: 100%;
     }
 `;
@@ -27,7 +27,7 @@ const TextContainer = styled.div`
     justify-content: center;
     color: white;
     
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 1180px) {
         width: 100%;
         text-align: center; 
     }

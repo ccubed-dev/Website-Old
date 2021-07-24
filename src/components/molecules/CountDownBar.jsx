@@ -4,110 +4,7 @@ import styled from "styled-components";
 import { Card } from "@atoms";
 import { Button } from "@atoms/buttons";
 import { FlexRow, FlexColumn } from "@atoms/layout";
-
-const Container = styled(Card)`
-	display: flex;
-	flex-direction: column;
-	padding: 2em;
-	width: 60%;
-
-    @media screen and (max-width: 1000px) {
-        width:80%;
-    }
-
-    margin-left: auto;
-    margin-right: auto;
-
-    /* background: rgba(0,0,0,0.5); */
-`;
-
-const CountDownContainer = styled(FlexRow)`
-    justify-content: space-between;
-    padding-left: 10%;
-    padding-right: 10%;
-    
-`;
-
-const NumberContainer = styled(FlexColumn)`
-    align-items: center;
-
-`;
-
-const Header = styled.h1`
-    font-size: 4em;
-    color: white;
-
-    cursor: default;
-`;
-
-const SubHeader = styled.h1`
-    font-size: 1.5em;
-    color: white;
-
-    cursor: default;
-`;
-
-const ButtonContainer = styled(FlexRow)`
-    width: 100%;
-    text-align: center;
-    display: inline;
-
-`;
-
-function MetricsBar() {
-    const [timeLeft, setTimeLeft] = useState(getTimeLeft());
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setTimeLeft(getTimeLeft());
-        });
-
-        return () => clearTimeout(timer);
-    });
-
-    return (
-        <Container>
-            <CountDownContainer>
-                <NumberContainer>
-                    <Header>{timeLeft.days}</Header>
-                    <SubHeader>Days</SubHeader>
-                </NumberContainer>
-
-                <NumberContainer>
-                    <Header>:</Header>
-                </NumberContainer>
-
-                <NumberContainer>
-                    <Header>{timeLeft.hours}</Header>
-                    <SubHeader>Hours</SubHeader>
-                </NumberContainer>
-
-                <NumberContainer>
-                    <Header>:</Header>
-                </NumberContainer>
-
-                <NumberContainer>
-                    <Header>{timeLeft.minutes}</Header>
-                    <SubHeader>Minutes</SubHeader>
-                </NumberContainer>
-
-                <NumberContainer>
-                    <Header>:</Header>
-                </NumberContainer>
-
-                <NumberContainer>
-                    <Header>{timeLeft.seconds}</Header>
-                    <SubHeader>Seconds</SubHeader>
-                </NumberContainer>
-            </CountDownContainer>
-
-            <ButtonContainer>
-                <Button>Register</Button>
-            </ButtonContainer>
-        </Container>
-    );
-}
-
-export default MetricsBar;
+import { useMediaPredicate } from "react-media-hook";
 
 const NEXT_EVENT_YEAR = 2021;
 const NEXT_EVENT_MONTH = 8;
@@ -131,3 +28,129 @@ function getTimeLeft() {
     return { "days": days, "hours": hours, "minutes": minutes, "seconds": seconds };
 
 }
+
+const Container = styled(Card)`
+	display: flex;
+	flex-direction: column;
+	padding: 2em;
+	width: 60%;
+
+    @media screen and (max-width: 1180px) {
+        width:80%;
+    }
+
+    margin-left: auto;
+    margin-right: auto;
+
+    /* background: rgba(256,256,256,1); */
+`;
+
+const CountDownContainer = styled(FlexRow)`
+    justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 10%;
+    
+`;
+
+const NumberContainer = styled(FlexColumn)`
+    align-items: center;
+
+`;
+
+const Header = styled.h1`
+    font-size: 4em;
+    color: white;
+
+    cursor: default;
+    text-align: center;
+    margin: 0.1em;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #1A384c;
+`;
+
+const EventTitle = styled(Header)`
+    font-size: 4.2em;
+    text-shadow: 1px 1px 8px black;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #1A384c;
+`;
+
+const SubHeader = styled.h1`
+    font-size: 1.5em;
+    color: white;
+
+    cursor: default;
+`;
+
+const ButtonContainer = styled(FlexRow)`
+    width: 100%;
+    text-align: center;
+    display: inline;
+
+`;
+
+function MetricsBar() {
+    const [timeLeft, setTimeLeft] = useState(getTimeLeft());
+    const isMobile = useMediaPredicate("(max-width: 1180px)");
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setTimeLeft(getTimeLeft());
+        });
+
+        return () => clearTimeout(timer);
+    });
+
+    return (
+        <Container>
+            <EventTitle>
+                C<sup>3</sup> Con
+            </EventTitle>
+            <CountDownContainer>
+                <NumberContainer>
+                    <Header>{timeLeft.days}</Header>
+                    <SubHeader>Days</SubHeader>
+                </NumberContainer>
+
+                {
+                    isMobile ?
+                        <></>
+                        :
+                        <>
+                            <NumberContainer>
+                                <Header>:</Header>
+                            </NumberContainer>
+
+                            <NumberContainer>
+                                <Header>{timeLeft.hours}</Header>
+                                <SubHeader>Hours</SubHeader>
+                            </NumberContainer>
+
+                            <NumberContainer>
+                                <Header>:</Header>
+                            </NumberContainer>
+
+                            <NumberContainer>
+                                <Header>{timeLeft.minutes}</Header>
+                                <SubHeader>Minutes</SubHeader>
+                            </NumberContainer>
+
+                            <NumberContainer>
+                                <Header>:</Header>
+                            </NumberContainer>
+
+                            <NumberContainer>
+                                <Header>{timeLeft.seconds}</Header>
+                                <SubHeader>Seconds</SubHeader>
+                            </NumberContainer>
+                        </>
+                }
+            </CountDownContainer>
+
+            <ButtonContainer>
+                <Button>Register</Button>
+            </ButtonContainer>
+        </Container>
+    );
+}
+
+export default MetricsBar;

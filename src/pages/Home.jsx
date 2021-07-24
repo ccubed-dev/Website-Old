@@ -7,9 +7,14 @@ import { Header } from "@organisms";
 import Wallpaper from "@resources/images/wallpaper.jpg";
 
 const HomeContainer = styled(PageContainer)`
-    background-image: url(${Wallpaper});
+    /* background-image: url(${Wallpaper});
     background-repeat: no-repeat;
     background-size: cover;
+
+    @media screen and (max-width: 1000px) {
+        background-size: cover;
+    } */
+    background-color: transparent;
 `;
 
 const SocialMediaIconsDiv = styled.div`
@@ -22,12 +27,15 @@ const SocialMediaIconsDiv = styled.div`
 function Home() {
     return (
         <HomeContainer>
-            <Header />
+            
+            {/* <Header /> */}
             <Greeter />
+            <br></br>
+            <br></br>
             <CountDownBar/>
-            <SocialMediaIconsDiv>
+            {/* <SocialMediaIconsDiv>
                 <SocialMediaBar></SocialMediaBar>
-            </SocialMediaIconsDiv>
+            </SocialMediaIconsDiv> */}
         </HomeContainer>
     );
 }

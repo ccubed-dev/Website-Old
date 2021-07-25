@@ -5,6 +5,7 @@ import { PageContainer } from "@atoms/layout";
 import { Greeter, CountDownBar, SocialMediaBar } from "@molecules";
 import { Header } from "@organisms";
 import Wallpaper from "@resources/images/wallpaper.jpg";
+import { useMediaPredicate } from "react-media-hook";
 
 const HomeContainer = styled(PageContainer)`
     /* background-image: url(${Wallpaper});
@@ -18,13 +19,14 @@ const HomeContainer = styled(PageContainer)`
 `;
 
 const SocialMediaIconsDiv = styled.div`
-    position: absolute;
+    position: fixed;
     bottom: 0;
     right: 0;
 `;
 
 
 function Home() {
+    const isMobile = useMediaPredicate("(max-width: 1180px)");
     return (
         <HomeContainer>
             
@@ -33,9 +35,14 @@ function Home() {
             <br></br>
             <br></br>
             <CountDownBar/>
-            {/* <SocialMediaIconsDiv>
-                <SocialMediaBar></SocialMediaBar>
-            </SocialMediaIconsDiv> */}
+            {
+                isMobile ?
+                    <></>
+                    :
+                    <SocialMediaIconsDiv>
+                        <SocialMediaBar></SocialMediaBar>
+                    </SocialMediaIconsDiv>
+            }
         </HomeContainer>
     );
 }

@@ -51,3 +51,5 @@ export const socialMedias = [
         link: "https://www.twitch.tv/ccubed_dev",
     },
 ];
+
+export const TypeFormFormId = "xhawPo5I";

@@ -1,6 +1,7 @@
 import React from "react";
-import { CircularButton } from "@atoms/buttons";
 import styled from "styled-components";
+
+import { CircularButton } from "@atoms/buttons";
 
 const Icon = styled.i`
     color: white;
@@ -18,7 +19,7 @@ const Link = styled.a`
 const SocialMediaIcon = ({href, icon}) => {
     return (
         <CircularButton>
-            <Link href={href} target="_blank" rel="noreferrer">
+            <Link href={href} target="_blank">
                 <Icon className={`fab ${icon}`}></Icon>
             </Link>
         </CircularButton>

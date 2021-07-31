@@ -1,21 +1,20 @@
 import React from "react";
 import styled from "styled-components";
 
-import { PageContainer } from "@atoms/layout";
+import { PageContainer, FlexRow } from "@atoms/layout";
 import { Greeter, CountDownBar, SocialMediaBar } from "@molecules";
-import { Header } from "@organisms";
-import Wallpaper from "@resources/images/wallpaper.jpg";
+//import { Header } from "@organisms";
+
 import { useMediaPredicate } from "react-media-hook";
+import RegistrationButton from "@atoms/buttons/RegistrationButton";
 
 const HomeContainer = styled(PageContainer)`
-    /* background-image: url(${Wallpaper});
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    @media screen and (max-width: 1000px) {
-        background-size: cover;
-    } */
     background-color: transparent;
+`;
+
+const ButtonContainer = styled(FlexRow)`
+    width: 100%;
+    justify-content: center;
 `;
 
 const SocialMediaIconsDiv = styled.div`
@@ -27,22 +26,26 @@ const SocialMediaIconsDiv = styled.div`
 
 function Home() {
     const isMobile = useMediaPredicate("(max-width: 1180px)");
+    const SocialMediaSection = function() {
+        return isMobile ? 
+            (<></>) 
+            : 
+            (<SocialMediaIconsDiv><SocialMediaBar/></SocialMediaIconsDiv>);
+    };
+
     return (
         <HomeContainer>
-            
             {/* <Header /> */}
             <Greeter />
             <br></br>
             <br></br>
             <CountDownBar/>
-            {
-                isMobile ?
-                    <></>
-                    :
-                    <SocialMediaIconsDiv>
-                        <SocialMediaBar></SocialMediaBar>
-                    </SocialMediaIconsDiv>
-            }
+            
+            <ButtonContainer>
+                <RegistrationButton/>
+            </ButtonContainer>
+
+            <SocialMediaSection/>
         </HomeContainer>
     );
 }

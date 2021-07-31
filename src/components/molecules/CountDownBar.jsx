@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styled from "styled-components";
 
 import { Card } from "@atoms";
-import { Button } from "@atoms/buttons";
 import { FlexRow, FlexColumn } from "@atoms/layout";
 import { useMediaPredicate } from "react-media-hook";
 
@@ -35,14 +34,12 @@ const Container = styled(Card)`
 	padding: 2em;
 	width: 60%;
 
+    margin-left: auto;
+    margin-right: auto;
+    
     @media screen and (max-width: 1180px) {
         width:80%;
     }
-
-    margin-left: auto;
-    margin-right: auto;
-
-    /* background: rgba(256,256,256,1); */
 `;
 
 const CountDownContainer = styled(FlexRow)`
@@ -82,23 +79,15 @@ const SubHeader = styled.h1`
     cursor: default;
 `;
 
-const ButtonContainer = styled(FlexRow)`
-    width: 100%;
-    text-align: center;
-    display: inline;
-
-`;
-
 function MetricsBar() {
-    const [timeLeft, setTimeLeft] = useState(getTimeLeft());
+    const [timeLeft, setTimeLeft] = React.useState(getTimeLeft());
     const isMobile = useMediaPredicate("(max-width: 1180px)");
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setTimeLeft(getTimeLeft());
-        });
 
-        return () => clearTimeout(timer);
-    });
+    React.useEffect(() => {
+        const timer = setTimeout( function() { setTimeLeft(getTimeLeft()); } );
+        return function() { clearTimeout(timer); };
+    
+    } );
 
     return (
         <Container>
@@ -145,10 +134,6 @@ function MetricsBar() {
                         </>
                 }
             </CountDownContainer>
-
-            <ButtonContainer>
-                <Button>Register</Button>
-            </ButtonContainer>
         </Container>
     );
 }

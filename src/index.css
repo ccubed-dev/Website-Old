@@ -1,31 +1,43 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "Roboto",
+        "Oxygen",
+        "Ubuntu",
+        "Cantarell",
+        "Fira Sans",
+        "Droid Sans",
+        "Helvetica Neue",
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
+
 div#root {
-  background-image: url("./resources/images/wallpaper.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vw;
+    background-image: url("./resources/images/wallpaper.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
 }
 
 @media screen and (max-width: 1180px) {
-  div#root {
-    height: 100%;
-  }
+    div#root {
+        height: 100%;
+    }
 }
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+    font-family: source-code-pro,
+        Menlo,
+        Monaco,
+        Consolas,
+        "Courier New",
+        monospace;
 }
 
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext");
 @import url("https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic&subset=latin,latin-ext");
 @import url("https://fonts.googleapis.com/css?family=PT+Sans:regular,bold,italic&subset=latin,latin-ext");
-
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.1/css/all.min.css");

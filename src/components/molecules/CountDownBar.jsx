@@ -87,46 +87,34 @@ function MetricsBar() {
         return function() { clearTimeout(timer); };
     });
 
+    // eslint-disable-next-line react/prop-types
+    const DisplayCounter = ({ header, subheader = false}) => {
+        return(
+            <NumberContainer>
+                <Header>{header}</Header>
+                {
+                    subheader && <SubHeader>{subheader}</SubHeader>
+                }
+            </NumberContainer>
+        );
+    };
+
     return (
         <Container>
             <EventTitle>
                 C<sup>3</sup> Con
             </EventTitle>
             <CountDownContainer>
-                <NumberContainer>
-                    <Header>{timeLeft.days}</Header>
-                    <SubHeader>Days</SubHeader>
-                </NumberContainer>
-
+                <DisplayCounter header={timeLeft.days} subheader={"Days"} />
                 {
                     !isMobile &&
                     <>
-                        <NumberContainer>
-                            <Header>:</Header>
-                        </NumberContainer>
-
-                        <NumberContainer>
-                            <Header>{timeLeft.hours}</Header>
-                            <SubHeader>Hours</SubHeader>
-                        </NumberContainer>
-
-                        <NumberContainer>
-                            <Header>:</Header>
-                        </NumberContainer>
-
-                        <NumberContainer>
-                            <Header>{timeLeft.minutes}</Header>
-                            <SubHeader>Minutes</SubHeader>
-                        </NumberContainer>
-
-                        <NumberContainer>
-                            <Header>:</Header>
-                        </NumberContainer>
-
-                        <NumberContainer>
-                            <Header>{timeLeft.seconds}</Header>
-                            <SubHeader>Seconds</SubHeader>
-                        </NumberContainer>
+                        <DisplayCounter header={":"} />
+                        <DisplayCounter header={timeLeft.hours} subheader={"Hours"} />
+                        <DisplayCounter header={":"} />
+                        <DisplayCounter header={timeLeft.minutes} subheader={"Minutes"} />
+                        <DisplayCounter header={":"} />
+                        <DisplayCounter header={timeLeft.seconds} subheader={"Seconds"} />
                     </>
                 }
             </CountDownContainer>

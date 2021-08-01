@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 import { Card } from "@atoms";
-import { FlexRow, FlexColumn } from "@atoms/layout";
+import { FlexRow } from "@atoms/layout";
+import { DisplayCounter } from "@organisms";
 import { useMediaPredicate } from "react-media-hook";
 
 const NEXT_EVENT_YEAR = 2021;
@@ -49,12 +50,7 @@ const CountDownContainer = styled(FlexRow)`
     
 `;
 
-const NumberContainer = styled(FlexColumn)`
-    align-items: center;
-
-`;
-
-const Header = styled.h1`
+const EventTitle = styled.h1`
     font-size: 4em;
     color: white;
 
@@ -63,19 +59,11 @@ const Header = styled.h1`
     margin: 0.1em;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #1A384c;
-`;
-
-const EventTitle = styled(Header)`
+    
     font-size: 4.2em;
     text-shadow: 1px 1px 8px black;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #1A384c;
-`;
-
-const SubHeader = styled.h1`
-    font-size: 1.5em;
-    color: white;
-    cursor: default;
 `;
 
 function MetricsBar() {
@@ -86,18 +74,6 @@ function MetricsBar() {
         const timer = setTimeout( function() { setTimeLeft(getTimeLeft()); } );
         return function() { clearTimeout(timer); };
     });
-
-    // eslint-disable-next-line react/prop-types
-    const DisplayCounter = ({ header, subheader = false}) => {
-        return(
-            <NumberContainer>
-                <Header>{header}</Header>
-                {
-                    subheader && <SubHeader>{subheader}</SubHeader>
-                }
-            </NumberContainer>
-        );
-    };
 
     return (
         <Container>

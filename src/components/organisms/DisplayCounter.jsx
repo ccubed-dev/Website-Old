@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { FlexColumn } from "@atoms/layout";
+import PropTypes from "prop-types";
 
 const NumberContainer = styled(FlexColumn)`
     align-items: center;
@@ -23,17 +24,24 @@ const SubHeader = styled.h1`
     cursor: default;
 `;
 
-
-// eslint-disable-next-line react/prop-types
-function DisplayCounter({ header, subheader = false}) {
+function DisplayCounter({ header, subHeader}) {
     return (
         <NumberContainer>
             <Header>{header}</Header>
             {
-                subheader && <SubHeader>{subheader}</SubHeader>
+                !!subHeader && <SubHeader>{subHeader}</SubHeader>
             }
         </NumberContainer>
     );
 }
+
+DisplayCounter.defaultProps = {
+    subHeader: false,
+};
+
+DisplayCounter.propTypes = {
+    header: PropTypes.string.isRequired,
+    subHeader: PropTypes.string,
+};
 
 export default DisplayCounter;

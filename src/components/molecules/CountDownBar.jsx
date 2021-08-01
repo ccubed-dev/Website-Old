@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 import { Card } from "@atoms";
@@ -26,14 +26,13 @@ function getTimeLeft() {
 
     let seconds = Math.floor(timeLeft / 1000);
     return { "days": days, "hours": hours, "minutes": minutes, "seconds": seconds };
-
 }
 
 const Container = styled(Card)`
-	display: flex;
-	flex-direction: column;
-	padding: 2em;
-	width: 60%;
+	  display: flex;
+	  flex-direction: column;
+	  padding: 2em;
+	  width: 60%;
 
     margin-left: auto;
     margin-right: auto;
@@ -47,7 +46,6 @@ const CountDownContainer = styled(FlexRow)`
     justify-content: space-between;
     padding-left: 10%;
     padding-right: 10%;
-    
 `;
 
 const EventTitle = styled.h1`
@@ -67,10 +65,10 @@ const EventTitle = styled.h1`
 `;
 
 function MetricsBar() {
-    const [timeLeft, setTimeLeft] = React.useState(getTimeLeft());
+    const [timeLeft, setTimeLeft] = useState(getTimeLeft());
     const isMobile = useMediaPredicate("(max-width: 1180px)");
 
-    React.useEffect(() => {
+    useEffect(() => {
         const timer = setTimeout( function() { setTimeLeft(getTimeLeft()); } );
         return function() { clearTimeout(timer); };
     });

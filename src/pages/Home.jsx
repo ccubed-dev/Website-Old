@@ -23,14 +23,13 @@ const SocialMediaIconsDiv = styled.div`
     right: 0;
 `;
 
-
 function Home() {
     const isMobile = useMediaPredicate("(max-width: 1180px)");
     const SocialMediaSection = function() {
-        return isMobile ?
-            (<></>)
-            :
-            (<SocialMediaIconsDiv><SocialMediaBar/></SocialMediaIconsDiv>);
+        return !isMobile &&
+          <SocialMediaIconsDiv>
+              <SocialMediaBar/>
+          </SocialMediaIconsDiv>;
     };
 
     return (

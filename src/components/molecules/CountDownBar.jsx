@@ -86,7 +86,7 @@ function MetricsBar() {
     React.useEffect(() => {
         const timer = setTimeout( function() { setTimeLeft(getTimeLeft()); } );
         return function() { clearTimeout(timer); };
-    
+
     } );
 
     return (
@@ -101,37 +101,34 @@ function MetricsBar() {
                 </NumberContainer>
 
                 {
-                    isMobile ?
-                        <></>
-                        :
-                        <>
-                            <NumberContainer>
-                                <Header>:</Header>
-                            </NumberContainer>
+                    !isMobile && <>
+                        <NumberContainer>
+                            <Header>:</Header>
+                        </NumberContainer>
 
-                            <NumberContainer>
-                                <Header>{timeLeft.hours}</Header>
-                                <SubHeader>Hours</SubHeader>
-                            </NumberContainer>
+                        <NumberContainer>
+                            <Header>{timeLeft.hours}</Header>
+                            <SubHeader>Hours</SubHeader>
+                        </NumberContainer>
 
-                            <NumberContainer>
-                                <Header>:</Header>
-                            </NumberContainer>
+                        <NumberContainer>
+                            <Header>:</Header>
+                        </NumberContainer>
 
-                            <NumberContainer>
-                                <Header>{timeLeft.minutes}</Header>
-                                <SubHeader>Minutes</SubHeader>
-                            </NumberContainer>
+                        <NumberContainer>
+                            <Header>{timeLeft.minutes}</Header>
+                            <SubHeader>Minutes</SubHeader>
+                        </NumberContainer>
 
-                            <NumberContainer>
-                                <Header>:</Header>
-                            </NumberContainer>
+                        <NumberContainer>
+                            <Header>:</Header>
+                        </NumberContainer>
 
-                            <NumberContainer>
-                                <Header>{timeLeft.seconds}</Header>
-                                <SubHeader>Seconds</SubHeader>
-                            </NumberContainer>
-                        </>
+                        <NumberContainer>
+                            <Header>{timeLeft.seconds}</Header>
+                            <SubHeader>Seconds</SubHeader>
+                        </NumberContainer>
+                    </>
                 }
             </CountDownContainer>
         </Container>

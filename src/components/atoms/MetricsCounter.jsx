@@ -21,13 +21,12 @@ const SubText = styled.p`
 	font-size: ${props => props.theme.fontSizes.subHeader};
 `;
 
-
 // eslint-disable-next-line react/prop-types
-const MetricsCounter = ({amount, name}) => {
+const MetricsCounter = ({ amount, name }) => {
     return (
         <FlexColumn>
             <Header>{amount}</Header>
-            <SubText>{name}</SubText>	
+            <SubText>{name}</SubText>
         </FlexColumn>
     );
 };

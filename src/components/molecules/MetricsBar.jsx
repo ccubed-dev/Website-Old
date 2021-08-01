@@ -19,9 +19,7 @@ function MetricsBar() {
     return (
         <Container>
             {
-                metrics.map((metric) => (
-                    <MetricsCounter amount={metric.amount} name={metric.name} key={metric.name} />
-                ))
+                metrics.map((metric) => <MetricsCounter amount={metric.amount} name={metric.name} key={metric.name} />)
             }
         </Container>
     );

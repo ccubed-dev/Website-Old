@@ -75,7 +75,6 @@ const EventTitle = styled(Header)`
 const SubHeader = styled.h1`
     font-size: 1.5em;
     color: white;
-
     cursor: default;
 `;
 
@@ -86,8 +85,7 @@ function MetricsBar() {
     React.useEffect(() => {
         const timer = setTimeout( function() { setTimeLeft(getTimeLeft()); } );
         return function() { clearTimeout(timer); };
-
-    } );
+    });
 
     return (
         <Container>
@@ -101,7 +99,8 @@ function MetricsBar() {
                 </NumberContainer>
 
                 {
-                    !isMobile && <>
+                    !isMobile &&
+                    <>
                         <NumberContainer>
                             <Header>:</Header>
                         </NumberContainer>

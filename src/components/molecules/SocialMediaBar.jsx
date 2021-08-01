@@ -5,7 +5,7 @@ import { SocialMediaIcon } from "@atoms";
 import { socialMedias } from "@constants";
 
 const Container = styled.div`
-	display: inline-block;
+	  display: inline-block;
     margin: 1em;
 `;
 
@@ -13,9 +13,7 @@ const SocialMediaBar = () => {
     return (
         <Container>
             {
-                socialMedias.map((social) => (
-                    <SocialMediaIcon href={social.link} icon={`fa-${social.name}`} key={social.name} />
-                ))
+                socialMedias.map((social) => <SocialMediaIcon href={social.link} icon={`fa-${social.name}`} key={social.name} />)
             }
         </Container>
     );

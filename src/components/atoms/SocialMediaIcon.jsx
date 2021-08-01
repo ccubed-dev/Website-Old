@@ -7,12 +7,10 @@ const Icon = styled.i`
     color: white;
     font-size: ${props => props.theme.fontSizes.socialMediaIcon};
     position: relative;
-
 `;
 
 const Link = styled.a`
     text-decoration: none;
-
 `;
 
 // eslint-disable-next-line react/prop-types

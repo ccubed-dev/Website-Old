@@ -20,7 +20,6 @@ const Img = styled.img`
 
     @media screen and (max-width: 1180px) {
         width: 50%;
-
     }
 `;
 

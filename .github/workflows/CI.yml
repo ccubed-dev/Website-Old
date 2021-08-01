@@ -13,10 +13,10 @@ jobs:
           persist-credentials: false
 
       - name: Install dependencies 💿
-        run: yarn install
+        run: npm ci
 
       - name: Run linter ⚡
-        run: yarn lint
+        run: npm run lint
 
       - name: Run build 🔨
-        run: yarn build
+        run: npm build

@@ -14,7 +14,7 @@ const SocialMediaBar = () => {
         <Container>
             {
                 socialMedias.map((social) => (
-                    <SocialMediaIcon href={social.link} icon={`fa-${social.name}`} key={social.name}></SocialMediaIcon>
+                    <SocialMediaIcon href={social.link} icon={`fa-${social.name}`} key={social.name} />
                 ))
             }
         </Container>

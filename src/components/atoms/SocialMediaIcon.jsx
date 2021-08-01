@@ -20,7 +20,7 @@ const SocialMediaIcon = ({href, icon}) => {
     return (
         <CircularButton>
             <Link href={href} target="_blank">
-                <Icon className={`fab ${icon}`}></Icon>
+                <Icon className={`fab ${icon}`} />
             </Link>
         </CircularButton>
     );

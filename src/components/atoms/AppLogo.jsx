@@ -27,7 +27,7 @@ const Img = styled.img`
 function AppLogo() {
     return (
         <a href="/">
-            <Img src={Icon}></Img>
+            <Img src={Icon} />
         </a>
     );
 }

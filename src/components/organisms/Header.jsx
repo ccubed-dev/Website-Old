@@ -79,7 +79,7 @@ function Header() {
                     <Container >
                         {
                             pages.map((page) => (
-                                <HeaderLink key={page} text={page} url={`/${page}`}/>
+                                <HeaderLink key={page} text={page} url={`/${page}`} />
                             ))
 
                         }

@@ -9,7 +9,7 @@ function App() {
         <BrowserRouter>
             <Theme>
                 <AppContainer>
-                    <Router/>
+                    <Router />
                 </AppContainer>
             </Theme>
         </BrowserRouter>

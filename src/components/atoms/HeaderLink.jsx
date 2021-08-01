@@ -24,9 +24,7 @@ const Link = styled.a`
 
 // eslint-disable-next-line react/prop-types
 function HeaderLink({text, url}) {
-    return (
-        <Link href={url}>{text}</Link>
-    );
+    return <Link href={url}>{text}</Link>;
 }
 
 export default HeaderLink;

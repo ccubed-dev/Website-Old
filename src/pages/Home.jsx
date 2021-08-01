@@ -27,9 +27,9 @@ const SocialMediaIconsDiv = styled.div`
 function Home() {
     const isMobile = useMediaPredicate("(max-width: 1180px)");
     const SocialMediaSection = function() {
-        return isMobile ? 
-            (<></>) 
-            : 
+        return isMobile ?
+            (<></>)
+            :
             (<SocialMediaIconsDiv><SocialMediaBar/></SocialMediaIconsDiv>);
     };
 
@@ -37,10 +37,10 @@ function Home() {
         <HomeContainer>
             {/* <Header /> */}
             <Greeter />
-            <br></br>
-            <br></br>
+            <br />
+            <br />
             <CountDownBar/>
-            
+
             <ButtonContainer>
                 <RegistrationButton/>
             </ButtonContainer>

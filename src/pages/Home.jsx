@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 import { PageContainer, FlexRow } from "@atoms/layout";
 import { Greeter, CountDownBar, SocialMediaBar } from "@molecules";
-//import { Header } from "@organisms";
 
 import { useMediaPredicate } from "react-media-hook";
 import RegistrationButton from "@atoms/buttons/RegistrationButton";
@@ -23,24 +22,22 @@ const SocialMediaIconsDiv = styled.div`
     right: 0;
 `;
 
-
 function Home() {
     const isMobile = useMediaPredicate("(max-width: 1180px)");
     const SocialMediaSection = function() {
-        return isMobile ? 
-            (<></>) 
-            : 
-            (<SocialMediaIconsDiv><SocialMediaBar/></SocialMediaIconsDiv>);
+        return !isMobile &&
+          <SocialMediaIconsDiv>
+              <SocialMediaBar/>
+          </SocialMediaIconsDiv>;
     };
 
     return (
         <HomeContainer>
-            {/* <Header /> */}
             <Greeter />
-            <br></br>
-            <br></br>
+            <br />
+            <br />
             <CountDownBar/>
-            
+
             <ButtonContainer>
                 <RegistrationButton/>
             </ButtonContainer>

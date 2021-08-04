@@ -20,14 +20,13 @@ const Img = styled.img`
 
     @media screen and (max-width: 1180px) {
         width: 50%;
-
     }
 `;
 
 function AppLogo() {
     return (
         <a href="/">
-            <Img src={Icon}></Img>
+            <Img src={Icon} />
         </a>
     );
 }

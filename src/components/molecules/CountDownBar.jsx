@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 import { Card } from "@atoms";
-import { FlexRow, FlexColumn } from "@atoms/layout";
+import { FlexRow } from "@atoms/layout";
+import { DisplayCounter } from "@organisms";
 import { useMediaPredicate } from "react-media-hook";
 
 const NEXT_EVENT_YEAR = 2021;
@@ -25,14 +26,13 @@ function getTimeLeft() {
 
     let seconds = Math.floor(timeLeft / 1000);
     return { "days": days, "hours": hours, "minutes": minutes, "seconds": seconds };
-
 }
 
 const Container = styled(Card)`
-	display: flex;
-	flex-direction: column;
-	padding: 2em;
-	width: 60%;
+	  display: flex;
+	  flex-direction: column;
+	  padding: 2em;
+	  width: 60%;
 
     margin-left: auto;
     margin-right: auto;
@@ -46,15 +46,9 @@ const CountDownContainer = styled(FlexRow)`
     justify-content: space-between;
     padding-left: 10%;
     padding-right: 10%;
-    
 `;
 
-const NumberContainer = styled(FlexColumn)`
-    align-items: center;
-
-`;
-
-const Header = styled.h1`
+const EventTitle = styled.h1`
     font-size: 4em;
     color: white;
 
@@ -63,31 +57,21 @@ const Header = styled.h1`
     margin: 0.1em;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #1A384c;
-`;
-
-const EventTitle = styled(Header)`
+    
     font-size: 4.2em;
     text-shadow: 1px 1px 8px black;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #1A384c;
 `;
 
-const SubHeader = styled.h1`
-    font-size: 1.5em;
-    color: white;
-
-    cursor: default;
-`;
-
 function MetricsBar() {
-    const [timeLeft, setTimeLeft] = React.useState(getTimeLeft());
+    const [timeLeft, setTimeLeft] = useState(getTimeLeft());
     const isMobile = useMediaPredicate("(max-width: 1180px)");
 
-    React.useEffect(() => {
+    useEffect(() => {
         const timer = setTimeout( function() { setTimeLeft(getTimeLeft()); } );
         return function() { clearTimeout(timer); };
-    
-    } );
+    });
 
     return (
         <Container>
@@ -95,43 +79,17 @@ function MetricsBar() {
                 C<sup>3</sup> Con
             </EventTitle>
             <CountDownContainer>
-                <NumberContainer>
-                    <Header>{timeLeft.days}</Header>
-                    <SubHeader>Days</SubHeader>
-                </NumberContainer>
-
+                <DisplayCounter header={timeLeft.days} subheader={"Days"} />
                 {
-                    isMobile ?
-                        <></>
-                        :
-                        <>
-                            <NumberContainer>
-                                <Header>:</Header>
-                            </NumberContainer>
-
-                            <NumberContainer>
-                                <Header>{timeLeft.hours}</Header>
-                                <SubHeader>Hours</SubHeader>
-                            </NumberContainer>
-
-                            <NumberContainer>
-                                <Header>:</Header>
-                            </NumberContainer>
-
-                            <NumberContainer>
-                                <Header>{timeLeft.minutes}</Header>
-                                <SubHeader>Minutes</SubHeader>
-                            </NumberContainer>
-
-                            <NumberContainer>
-                                <Header>:</Header>
-                            </NumberContainer>
-
-                            <NumberContainer>
-                                <Header>{timeLeft.seconds}</Header>
-                                <SubHeader>Seconds</SubHeader>
-                            </NumberContainer>
-                        </>
+                    !isMobile &&
+                    <>
+                        <DisplayCounter header={":"} />
+                        <DisplayCounter header={timeLeft.hours} subheader={"Hours"} />
+                        <DisplayCounter header={":"} />
+                        <DisplayCounter header={timeLeft.minutes} subheader={"Minutes"} />
+                        <DisplayCounter header={":"} />
+                        <DisplayCounter header={timeLeft.seconds} subheader={"Seconds"} />
+                    </>
                 }
             </CountDownContainer>
         </Container>

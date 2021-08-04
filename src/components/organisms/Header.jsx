@@ -17,7 +17,7 @@ const Container = styled(FlexRow)`
     justify-content: flex-end;
 `;
 
-var styles = {
+const styles = {
     bmBurgerButton: {
         position: "fixed",
         width: "36px",
@@ -70,18 +70,13 @@ function Header() {
                 isMobile ?
                     <Menu styles={styles} >
                         {
-                            pages.map((page) => (
-                                <a key={page} className="bmItem" text={page} href={`/${page}`}>{page}</a>
-                            ))
+                            pages.map((page) => <a key={page} className="bmItem" text={page} href={`/${page}`}>{page}</a>)
                         }
                     </Menu>
                     :
                     <Container >
                         {
-                            pages.map((page) => (
-                                <HeaderLink key={page} text={page} url={`/${page}`}/>
-                            ))
-
+                            pages.map((page) => <HeaderLink key={page} text={page} url={`/${page}`} />)
                         }
                     </Container>
             }

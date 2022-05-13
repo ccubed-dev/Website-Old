@@ -5,7 +5,7 @@ import { SocialMediaIcon } from "@atoms";
 import { socialMedias } from "@constants";
 
 const Container = styled.div`
-	  display: inline-block;
+	display: inline-block;
     margin: 1em;
 `;
 

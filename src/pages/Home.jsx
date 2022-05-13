@@ -1,19 +1,23 @@
 import React from "react";
 import styled from "styled-components";
 
-import { PageContainer, FlexRow } from "@atoms/layout";
-import { Greeter, CountDownBar, SocialMediaBar } from "@molecules";
-
+import { PageContainer } from "@atoms/layout";
+import { Greeter, SocialMediaBar } from "@molecules";
 import { useMediaPredicate } from "react-media-hook";
-import RegistrationButton from "@atoms/buttons/RegistrationButton";
 
 const HomeContainer = styled(PageContainer)`
     background-color: transparent;
+    display: inline-block;
+    text-align: center;
 `;
 
-const ButtonContainer = styled(FlexRow)`
-    width: 100%;
-    justify-content: center;
+const Text = styled.p`
+    color: white;
+    font-size: 2em;
+`;
+
+const Link = styled.a`
+    color: aqua;
 `;
 
 const SocialMediaIconsDiv = styled.div`
@@ -34,14 +38,15 @@ function Home() {
     return (
         <HomeContainer>
             <Greeter />
-            <br />
-            <br />
-            <CountDownBar/>
-
-            <ButtonContainer>
-                <RegistrationButton/>
-            </ButtonContainer>
-
+            <Text>
+                {"Coming Soon..."}
+                <br/>
+                {"Follow us on our socials "}
+                <Link href="https://linktr.ee/ccubed_dev" target="_blank" rel="noreferrer">
+                    {"here"}
+                </Link>
+                {" for updates!"}
+            </Text>
             <SocialMediaSection/>
         </HomeContainer>
     );

@@ -42,7 +42,7 @@ function Home() {
                 {"Coming Soon..."}
                 <br/>
                 {"Follow us on our socials "}
-                <Link href="https://linktr.ee/ccubed_dev" target="_blank" rel="noreferrer">
+                <Link href="https://linktr.ee/ccubed.dev" target="_blank" rel="noreferrer">
                     {"here"}
                 </Link>
                 {" for updates!"}
